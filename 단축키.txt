@@ -1,0 +1,6 @@
+설정 : win + i 
+실행 : win + r // 계산기 calc // 그림판 pbrush
+가상화면 : 
+ 생성 ctrl + win + d // 삭제 ctrl + win + f4 // 전환 ctrl + win + 좌우화살표
+작업관리자 : ctrl + shift + esc
+알람 : win + a
