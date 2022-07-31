@@ -1,43 +1,59 @@
-# 0. 환경설정
+# git 명령어 정리
 
-### //user name
-​ git config --global user.name "lee"
-## //user email
-​ git config --global user.email "lee@abc.com"
+## 환경설정
 
-//vscode를 editor로 설정하기
-​ git config --global core.edit "code --wait"
+- **user name**
+ ```bash
+ git config --global user.name "lee" 
+ ```
 
-//환경설정파일 edit로 열기
-​ git config --global --edit 또는 git config --global -e
+- **user email**
+```bash
+ git config --global user.email "lee@abc.com"
+```
 
-//명령어 단축별명 설정
-​ git config --global alias.st status  //git status를 git st로 실행
+- **vscode를 editor로 설정하기**
+```bash
+ `git config --global core.edit "code --wait" `
+```
 
-//crlf(개행문자) 옵션설정 하기
-​ git config --global core.autocrlf true
+- **환경설정파일 edit로 열기**
+```bash
+`git config --global --edit ` 또는 `git config --global -e `
+ ```
+ 
+- **명령어 단축별명 설정**
+```bash
+ git config --global alias.st status  (`git status`를 `git st`로 실행할 수 있음)
+ ```
+ 
+- **crlf(개행문자) 옵션설정 하기**
+ ```bash
+ git config --global core.autocrlf true
+ ```
 
+## 1. 초기화 (init)
 
-# 1. 초기화 
+### git을 사용할 폴더로 들어와서 명령 실행, git설정파일 설치
+​ `git` `init`  
+  
+## 1.1. 그대로 복사(Clone)하기
 
-​ git init  //git을 사용할 폴더로 들어와서 명령 실행, git설정파일 설치
+### clone 명령을 실행하면 원격repository를 그대로 복사하여 git을 사용할 수 있도록 설정이 완료된 상태가 됨
 
-# 1.1.  github repository 그대로 복사(Clone)하기
-
-//아래명령 실행하면, repository명으로 폴더생성한 후 그대로 복사해 옴
-​ git clone github주소
-  - clone 명령을 실행하면 원격repository를 그대로 복사하여 git을 사용할 수 있도록 설정이 완료된 상태가 됨
+​ `git clone github주소` (원격 repository명으로 폴더를 생성하여 복사함)
+   
 
 # 2. 파일을 Stage에 추가하기
 
-​ git add .
-​ 또는 git stage .
+| `git add . ` 또는  `git stage .  `              |
+| ----------------------------------------------- |
 
 # 3. 상태정보 확인
-
-​ git status  //커밋전 파일 stage, 수정 정보확인
-​ git log   //커밋 기록확인
-
+```bash
+  git status  //커밋전 파일 stage, 수정 정보확인
+  git log   //커밋 기록확인
+```
 # 4. Commit하기, 수정하기
 
 ​ git commit -m "메시지내용"
