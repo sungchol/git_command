@@ -69,12 +69,15 @@ git log
 ## 4. Commit하기, Commit 수정하기
 
 ```bash
+#commit 실행하기
 ​ git commit -m "메시지내용"
 
-# 직전커밋수정하기
-# 파일 수정등 작업을 한 후, 'git add .'명령실행후 아래명령실행하면 edit창이 열리고, 메시지수정후 저장
+# 직전commit 수정하기
+# 파일 수정등 작업을 한 후, 'git add .'명령실행후 --amend 옵션실행
+# -m 옵션없이 실행하면 메시지 수정을 위한 edit창이 열리고, 메시지수정후 저장하면 됨
 # 파일 수정없이 단순히 커밋 메시지를 수정하는 경우도 사용가능
-​ git commit --amend 
+ git commit --amend  또는
+ git commit --amend -m "amend message"
 
 ```
 
