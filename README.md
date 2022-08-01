@@ -202,9 +202,10 @@ bbbbb
 
 ## 12. commit 삭제 (reset)
  - commit을 삭제하면 내용도 함께 삭제(변경)되니 주의필요
-
+ - reset 명령으로 지정한 위치로 head위치를 변경시켜서 commit을 삭제하게 됨
+ - 
 ```bash
- #HEAD는 마지막 커밋을 가르키며, ~개수만큼 commit이 삭제됨
+ # HEAD는 마지막 커밋을 가르키며, ~개수만큼 전단계의 commit위치 가르키게 되어 ~개수 만큼 commit이 삭제됨
  git reset --hard HEAD~~
 
  # 방금 reset하여 삭제한 commit 복구하기
@@ -289,5 +290,5 @@ add ggg등등
 ```
 
 ## 상세 명령어 설명은 git document(https://git-scm.com/docs) 참고
-
+## 게임을 통해 배우는 git (https://learngitbranching.js.org/?locale=ko)
 
