@@ -126,7 +126,10 @@ git log
 ## 6. tag 만들기 (선택사항)
 
 ```bash
-​ git tag -a "tag명" -m "내용"
+# 특정위치에 태그달기, 커밋번호 생략시 현재 커밋위치에 tag생성
+ git tag -a "tag명" -m "내용" 커밋번호(or 브랜치명)
+ 또는
+ git tag  tag명 -m "내용" 커밋번호(or 브랜치명)
 
 # tag list확인
 ​ git tag -l 
