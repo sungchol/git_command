@@ -96,15 +96,30 @@ git log
  git branch -a 
 
 # 합쳐진 브랜치삭제
- git branch -d 
+ git branch -d branchName
 # 안 합쳐진 브랜치도 강제삭제
- git branch -D 
+ git branch -D branchName
 
 # 작업브랜치 변경
  git switch 브랜치명
 
 # 새브랜치만들면서 작업브랜치변경
  git switch -c newBranchName 
+ 
+# 작업브랜치 checkout(선택)
+# switch와 유사하나 커밋번호도 선택할 수 있음
+# 현재 진행중인 브랜치 커밋을 수정하지 않고 특정커밋부터 별도의 작업을 할 경우,
+# 커밋번호 또는 Head(마지막커밋위치)기준 상대위치를 선택하면 Head가 현브랜치에서 분리되어, 커밋번호 위치에 이름없는 브랜치가 생성됨
+# 그 상태에서 생성한 커밋작업을 별도 브랜치로 저장하고 싶다면, git switch -c newBranchName 명령실행하면 됨
+ git checkout 브랜치명 (switch와 동일)
+ git checkout e84e013(커밋번호)
+ git checkout HEAD (현재 작업브랜치에서 Head 분리)
+ 
+# 브랜치 특정 commit으로 이동
+# 이동시킬 브랜치는 작업브랜치로 선택된 상태가 아니여야 함
+ git branch -f main e84e013 (main을 커밋번호 위치로 이동시킴)
+ git branch -f main head~3 (main을 head로 부터 3단계 전단계로 이동시킴)
+  
 
 ```
 
