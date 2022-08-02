@@ -307,6 +307,6 @@ add ggg등등
 
 ```
 
-## 상세 명령어 설명은 git document(https://git-scm.com/docs) 참고
-## 게임을 통해 배우는 git (https://learngitbranching.js.org/?locale=ko)
+## 상세 명령어 설명은 [git document (git-scm.com/docs)](https://git-scm.com/docs) 참고
+## [게임을 통해 배우는 git (learngitbranching.js.org)](https://learngitbranching.js.org/?locale=ko)
 
