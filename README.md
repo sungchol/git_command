@@ -115,7 +115,7 @@ git log
  git checkout e84e013(커밋번호)
  git checkout HEAD (현재 작업브랜치에서 Head 분리)
  
-# 브랜치 만들고 작업브랜치 하기
+# 브랜치 만들고 작업브랜치로 선택하기
  git checkout -b 브랜치명 (switch -c 와 동일)
  
 # 브랜치 특정 commit으로 이동
