@@ -115,6 +115,9 @@ git log
  git checkout e84e013(커밋번호)
  git checkout HEAD (현재 작업브랜치에서 Head 분리)
  
+# 브랜치 만들고 작업브랜치 하기
+ git checkout -b 브랜치명 (switch -c 와 동일)
+ 
 # 브랜치 특정 commit으로 이동
 # 이동시킬 브랜치는 작업브랜치로 선택된 상태가 아니여야 함
  git branch -f main e84e013 (main을 커밋번호 위치로 이동시킴)
