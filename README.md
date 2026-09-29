@@ -79,6 +79,11 @@ git log
  git commit --amend  또는
  git commit --amend -m "amend message"
 
+# 추가한 파일 제거하기
+ git rm --cached config.js
+ git commit -m "config.js를 추적 대상에서 제외"
+ git push
+
 ```
 
 ## 5. Branch관리 
