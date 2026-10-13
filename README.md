@@ -4,34 +4,38 @@
 
 - **user name**
  ```bash
- git config --global user.name "lee" 
+git config --global user.name "lee" 
  ```
 
 - **user email**
 ```bash
- git config --global user.email "lee@abc.com"
+git config --global user.email "lee@abc.com"
 ```
 
 - **vscode를 editor로 설정하기**
 ```bash
- git config --global core.edit "code --wait" 
+git config --global core.edit "code --wait" 
 ```
 
 - **환경설정파일 edit로 열기**
 ```bash
- git config --global --edit 또는
- git config --global -e 
+git config --global --edit 또는
+git config --global -e 
 ```
  
 - **명령어 단축별명 설정**
 ```bash
- git config --global alias.st status  (`git status`를 `git st`로 실행할 수 있음)
+git config --global alias.st status  (`git status`를 `git st`로 실행할 수 있음)
 ```
  
 - **crlf(개행문자) 옵션설정 하기**
 ```bash
-  git config --global core.autocrlf true
+git config --global core.autocrlf true
 ```
+- **push전pull --rebase 실행 옵션**
+```bash
+git config --global pull.rebase true
+``` 
 
 ## 1. 초기화 (init)
 
@@ -173,6 +177,26 @@ git log
   
  # tag push하기
  git push --tag origin main
+
+ # origin 이 변경되어 push가 안될경우
+## 변경사항 체크
+git fetch origin
+git log --oneline main..origin/main
+
+## 출력된 커밋유지하면서 업로드해야하는 경우
+git pull --rebase origin main
+git push origin main
+
+#rebase에서 충돌난 경우 충돌된 부분 수정후 다시 push
+git add 충돌난_파일
+git rebase --continue
+git push origin main
+
+#origin 변경사항 무시하고 로컬내용으로 덛어쓰도록 push 할 경우
+git push --force-with-lease origin main
+
+#이런충돌을 피하려면 push전 아래명령어 실행
+git pull --rebase
 
 ```
 
