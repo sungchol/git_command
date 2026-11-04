@@ -14,7 +14,7 @@ git config --global user.email "lee@abc.com"
 
 - **vscode를 editor로 설정하기**
 ```bash
-git config --global core.edit "code --wait" 
+git config --global core.editor "code --wait" 
 ```
 
 - **환경설정파일 edit로 열기**
